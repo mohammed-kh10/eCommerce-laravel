@@ -1,0 +1,20 @@
+.navbar .navbar-brand {
+  margin-right: 30px;
+}
+
+.index-header {
+  height: 60vh;
+  background-color: #7c192a;
+  padding: 10%;
+}
+.index-header div {
+  text-align: center;
+  width: 50%;
+  text-align: justify;
+  color: darkorange;
+  font-size: 22px;
+}
+.index-header div h1 {
+  color: yellow;
+}
+

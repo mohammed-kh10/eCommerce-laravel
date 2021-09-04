@@ -14,17 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('frontend/welcome');
+})->name("home");
 
-Route::get('/about-me', function () {
-    return view('about');
-});
+Route::get('/about', function () {
+    return view('frontend/about');
+})->name("about");
 
-Route::view('contact-me', "contact" , [
+
+Route::view('/contact', "frontend/contact" , [
     'pageName' => 'contact me page',
     'pageDescription' => 'This is Page Description',
-]);
+])->name("contact");
 
 Route::get('/category/{id}', function ($id) {
 
@@ -34,7 +35,7 @@ Route::get('/category/{id}', function ($id) {
         '3' => 'Books',
     ];
 
-    return view('category' , [
+    return view('frontend/category' , [
         'userId' => $cats[$id] ?? "this id is not found",
     ]);
-});
+})->name("category");
