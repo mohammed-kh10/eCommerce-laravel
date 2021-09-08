@@ -1,0 +1,21 @@
+// variables
+$backcolor: rgb(124, 25, 42);
+$yellow: yellow;
+$darkorange: darkorange;
+
+.index-header{
+    height: 60vh;
+    background-color: $backcolor;
+    padding: 10%;
+
+    div{
+        h1{
+            color: $yellow;
+        }
+        text-align: center;
+        width: 50%;
+        text-align: justify;
+        color: $darkorange;
+        font-size: 22px;
+    }
+}
