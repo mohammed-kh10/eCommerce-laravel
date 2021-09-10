@@ -21,7 +21,7 @@
     		this.mercado_price_quantity();
     		this.mercado_remove_product_in_cart();
     		this.mercado_product_slider();
-    		this.mercado_toggle_vertical_main_menu();
+			this.mercado_toggle_vertical_main_menu();
             this.mercado_sticky_menu();
             this.mercado_google_maps();
     	},
@@ -64,12 +64,14 @@
                 });
                 $('.wrap-search-form .wrap-list-cate .list-cate').on('click', 'li', function (event) {
                     var _this 	 = $(this),
-						_value 	 = _this.attr('value'),
+						//_value 	 = _this.attr('value'),
+						_value 	 = _this.text(),
 						_content = _this.text(),
 						_title 	 = _this.text();
                     _content = _content.slice(0, 12);
                     _this.parent().siblings('a').text(_content).attr('title',_title);
-                    _this.parent().siblings('input[name="product-cate"]').val(_value);
+                    _this.parent().siblings('input[name="product-cat"]').val(_value);
+                    _this.parent().siblings('input[name="product-cat_id"]').val(_this.data("id"));
                     _this.parent().slideUp();
                 });
 			}
@@ -357,7 +359,7 @@
 	                    _this.addClass('active');
 	                    _this.parents().siblings('.tab-contents').find('.active').removeClass('active');
 	                    _this.parents().siblings('.tab-contents').find(_this.attr('href')).addClass('active');
-                    }  
+                    }
                 });
             }
 
@@ -586,22 +588,22 @@
         },
 	}
 	/* ---------------------------------------------
-	 Scripts on load
+	Scripts on load
 	 --------------------------------------------- */
 	window.onload = function () {
 		MERCADO_JS.init();
 	}
 
 	/* ---------------------------------------------
-	 Scripts run when document are ready
+	Scripts run when document are ready
 	 --------------------------------------------- */
     $(document).ready(function () {
     	MERCADO_JS.onReady();
 	});
 
 	/* ---------------------------------------------
-	 Scripts resize
-	 --------------------------------------------- */
+	Scripts resize
+	--------------------------------------------- */
 	$(window).on("resize", function() {
 		MERCADO_JS.onResize();
 	});

@@ -101,6 +101,10 @@ input,textarea{
     box-shadow: none;
 }
 
+.validation-errors{
+    color: $red;
+}
+
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
     font-family: Flaticon;
