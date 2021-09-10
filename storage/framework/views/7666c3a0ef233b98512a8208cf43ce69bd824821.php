@@ -7,6 +7,7 @@
         <title><?php echo $__env->yieldContent('title' , 'unkown page'); ?></title>
 
         <link rel="styleSheet" href="<?php echo e(asset('css/vendor/bootstrap.min.css')); ?>">
+        <link rel="styleSheet" href="<?php echo e(asset('css/all.min.css')); ?>">
         <link rel="styleSheet" href="<?php echo e(asset('css/app.css')); ?>">
 
     </head>
