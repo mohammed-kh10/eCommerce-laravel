@@ -101,6 +101,18 @@
                                                         <a title="Dashboard" href="{{ route('admin.dashboard') }}">Dashboard</a>
                                                     </li>
 
+                                                    <li class="menu-item" >
+                                                        <a title="categories" href="{{ route('admin.categories') }}">Categories</a>
+                                                    </li>
+
+                                                    <li class="menu-item" >
+                                                        <a title="products" href="{{ route('admin.products') }}">All Products</a>
+                                                    </li>
+
+                                                    <li class="menu-item" >
+                                                        <a title="Manage Home Slider" href="{{ route('admin.homeslider') }}">Manage Home Slider</a>
+                                                    </li>
+
                                                     <form action="{{ route('logout') }}" method="post">
                                                         @csrf
                                                         <li class="menu-item" >
