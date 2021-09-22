@@ -1,7 +1,5 @@
 
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/font-awesome.min.css')); ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/vendor/bootstrap.min.css')); ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/vendor/owl.carousel.min.css')); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/vendor/flexslider.css')); ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/vendor/chosen.min.css')); ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/style.css')); ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/vendor/color-01.css')); ?>">
@@ -82,6 +81,18 @@
                                                         <a title="Dashboard" href="<?php echo e(route('admin.dashboard')); ?>">Dashboard</a>
                                                     </li>
 
+                                                    <li class="menu-item" >
+                                                        <a title="categories" href="<?php echo e(route('admin.categories')); ?>">Categories</a>
+                                                    </li>
+
+                                                    <li class="menu-item" >
+                                                        <a title="products" href="<?php echo e(route('admin.products')); ?>">All Products</a>
+                                                    </li>
+
+                                                    <li class="menu-item" >
+                                                        <a title="Manage Home Slider" href="<?php echo e(route('admin.homeslider')); ?>">Manage Home Slider</a>
+                                                    </li>
+
                                                     <form action="<?php echo e(route('logout')); ?>" method="post">
                                                         <?php echo csrf_field(); ?>
                                                         <li class="menu-item" >
@@ -130,18 +141,18 @@
 							<a href="index.html" class="link-to-home"><img src="<?php echo e(asset('assets/images/logo-top-1.png')); ?>" alt="mercado"></a>
 						</div>
 
-						<?php
+                        <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('header-search-component')->html();
-} elseif ($_instance->childHasBeenRendered('HAxHuKJ')) {
-    $componentId = $_instance->getRenderedChildComponentId('HAxHuKJ');
-    $componentTag = $_instance->getRenderedChildComponentTagName('HAxHuKJ');
+} elseif ($_instance->childHasBeenRendered('qBSIcOw')) {
+    $componentId = $_instance->getRenderedChildComponentId('qBSIcOw');
+    $componentTag = $_instance->getRenderedChildComponentTagName('qBSIcOw');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('HAxHuKJ');
+    $_instance->preserveRenderedChild('qBSIcOw');
 } else {
     $response = \Livewire\Livewire::mount('header-search-component');
     $html = $response->html();
-    $_instance->logRenderedChild('HAxHuKJ', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('qBSIcOw', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
@@ -160,7 +171,7 @@ echo $html;
 								<a href="#" class="link-direction">
 									<i class="fa fa-shopping-basket" aria-hidden="true"></i>
 									<div class="left-info">
-										<?php if(Cart::count() > 0): ?>
+                                        <?php if(Cart::count() > 0): ?>
 										<span class="index"><?php echo e(Cart::count()); ?> items</span>
                                         <?php endif; ?>
 										<span class="title">CART</span>
@@ -221,10 +232,12 @@ echo $html;
 		</div>
 	</header>
 
+
     
     <?php echo e($slot); ?>
 
     
+
 
 	<footer id="footer">
 		<div class="wrap-footer-content footer-style-1">
@@ -493,5 +506,4 @@ echo $html;
 
 </body>
 </html>
-
-<?php /**PATH C:\xampp\htdocs\eCommerce-laravel\resources\views/layouts/guest.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\xampp\htdocs\eCommerce-laravel\resources\views/master.blade.php ENDPATH**/ ?>
