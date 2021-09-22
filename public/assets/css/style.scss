@@ -1,3 +1,12 @@
+// variables
+$white: #fff;
+$red: #ff2832;
+$blue: #365db5;
+$gray: #666666;
+$opengray: #ddd;
+$darkgray: #444444;
+
+
 // include front end design
 // include front end design
 @import "frontend/navbar";
@@ -6,6 +15,5 @@
 
 // include back end design
 // include back end design
-@import "backend/example";
+@import "backend/backendDesign";
 
-// variables
